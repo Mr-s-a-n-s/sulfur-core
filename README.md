@@ -1,4 +1,1 @@
-# sulfur-core
-火湖墨画mod及插件通用库
-
-123
+# 火湖墨画sulfur-mod.core 插件核心
