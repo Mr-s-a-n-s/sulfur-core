@@ -12,7 +12,7 @@
 ✨ **ModCore** provides **API interfaces** that allow other mods to integrate easily or serve as a reference for other mod developers. 🚧 Currently, it is in the improvement stage and being prepared for open-source release.  
 
 🎯 **Main Features:**  
-- ✅ Full item API and corresponding Sprite dictionary  
+- ✅ Full item and corresponding Sprite dictionary  
 - ✅ Player event tracking  
 - ✅ Map events  
 - ✅ Loading events  
