@@ -12,7 +12,7 @@
 ✨ **ModCore** proporciona **interfaces de API** que permiten a otros mods integrarse fácilmente o servir como referencia para otros desarrolladores de mods. 🚧 Actualmente, está en fase de mejora y preparación para su lanzamiento como código abierto.  
 
 🎯 **Características principales:**  
-- ✅ API completa de objetos y diccionario de Sprites correspondientes  
+- ✅ completa de objetos y diccionario de Sprites correspondientes  
 - ✅ Seguimiento de eventos del jugador  
 - ✅ Eventos del mapa  
 - ✅ Eventos de carga  
