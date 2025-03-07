@@ -4,7 +4,7 @@
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
 
 ## 🌍 Language | 语言 | 言語 | Langue
-- [🇺🇸 English](README.zh-CN.md)
+- [🇺🇸 English](README.EN.md)
 - [🇨🇳 简体中文](README.md)
 
 ## 🔥 Introduction  
