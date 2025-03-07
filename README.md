@@ -45,7 +45,7 @@
 ## 🛠 API 介绍
 **监听伤害事件**
 ```csharp
-DamageAPI.OnBeforeDamage += (unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
+DamageAPI.OnBeforeDamage += (unit Unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
 {
     if (unit == PlayerAPI.player) return false; // 阻止伤害
     return true;
