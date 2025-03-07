@@ -6,6 +6,7 @@
 ## 🌍 Language | 语言 | 言語 | Langue
 - [🇺🇸 English](README.EN.md)
 - [🇨🇳 简体中文](README.md)
+- [🇪🇸 Español](README.es.md)
 
 ## 🔥 Introduction  
 ✨ **ModCore** provides **API interfaces** that allow other mods to integrate easily or serve as a reference for other mod developers. 🚧 Currently, it is in the improvement stage and being prepared for open-source release.  
