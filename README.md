@@ -3,7 +3,7 @@
 [![BepInEx](https://img.shields.io/badge/BepInEx-5.4.21-green)](https://docs.bepinex.dev/)
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
 
-✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开源人员提供参考，目前正在完善阶段并为做开源做准备。  
+✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开发人员提供参考，目前正在完善阶段并为做开源做准备。  
 🎯 **主要功能：**
 - ✅ 监听大部分游戏常用的事件
 - ✅ 提供游戏内的绝大部分API
