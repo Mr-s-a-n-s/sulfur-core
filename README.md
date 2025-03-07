@@ -3,11 +3,15 @@
 [![BepInEx](https://img.shields.io/badge/BepInEx-5.4.21-green)](https://docs.bepinex.dev/)
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
 
-✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开发人员提供参考，目前正在完善阶段并为做开源做准备。  
+✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开发人员提供参考，🚧目前正在完善阶段并为做开源做准备。  
 🎯 **主要功能：**
-- ✅ 监听大部分游戏常用的事件
-- ✅ 提供游戏内的绝大部分API
 - ✅ 玩家事件追踪
+- ✅ 地图事件
+- ✅ 载入事件
+- ✅ 生成事件
+- ✅ 各种Manager集合API
+- ✅ 玩家相关API
+- ✅ 伤害事件
 - 📌 待补充...
 
 ## 📸 预览
@@ -15,6 +19,12 @@
 
 ## 🚀 安装指南
 等待补充
+
+## 🚧 目前正在施工
+- 🛠️ 补全已知API
+- 🛠️ 补全事件
+- 🛠️ 补全开发文档
+- 📌 待补充... 
 
 ## 🛠 API 介绍
 **监听伤害事件**
