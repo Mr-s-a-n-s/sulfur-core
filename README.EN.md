@@ -47,7 +47,7 @@ Feel free to submit PRs or Issues to improve this mod!
 ## 🛠 API Overview  
 ### **Listening to Damage Events**  
 ```csharp
-DamageAPI.OnBeforeDamage += (unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
+DamageAPI.OnBeforeDamage += (unit Unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
 {
     if (unit == PlayerAPI.player) return false; // Prevent damage
     return true;
