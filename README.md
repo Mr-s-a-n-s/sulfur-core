@@ -7,6 +7,7 @@
 - [🇺🇸 English](README.md)
 - [🇨🇳 简体中文](README.zh-CN.md)
 
+## 🔥 介绍
 ✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开发人员提供参考，🚧目前正在完善阶段并为做开源做准备。  
 🎯 **主要功能：**
 - ✅ 全物品API和对应的Sprite字典
