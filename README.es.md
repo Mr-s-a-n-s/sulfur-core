@@ -47,7 +47,7 @@ Pendiente de añadir.
 ## 🛠 Descripción de la API  
 ### **Escuchar eventos de daño**  
 ```csharp
-DamageAPI.OnBeforeDamage += (unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
+DamageAPI.OnBeforeDamage += (unit Unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
 {
     if (unit == PlayerAPI.player) return false; // Evitar el daño
     return true;
