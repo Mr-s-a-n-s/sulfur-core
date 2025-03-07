@@ -3,7 +3,7 @@
 [![BepInEx](https://img.shields.io/badge/BepInEx-5.4.21-green)](https://docs.bepinex.dev/)
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
 
-✨ **My Awesome Mod** 是一个增强游戏体验的 Mod，提供 **API 接口** 让其他 Mod 轻松集成。  
+✨ **ModCore** 是一个增强游戏体验的 Mod，提供 **API 接口** 让其他 Mod 轻松集成。  
 🎯 **主要功能：**
 - ✅ 伤害监听 API
 - ✅ 物品管理 API
