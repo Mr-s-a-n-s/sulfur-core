@@ -3,6 +3,11 @@
 [![BepInEx](https://img.shields.io/badge/BepInEx-5.4.21-green)](https://docs.bepinex.dev/)
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
 
+## 🌍 Language | 语言 | 言語 | Langue
+- [🇺🇸 English](README.EN.md)
+- [🇨🇳 简体中文](README.md)
+- [🇪🇸 Español](README.es.md)
+
 ## 🔥 Introducción  
 ✨ **ModCore** proporciona **interfaces de API** que permiten a otros mods integrarse fácilmente o servir como referencia para otros desarrolladores de mods. 🚧 Actualmente, está en fase de mejora y preparación para su lanzamiento como código abierto.  
 
