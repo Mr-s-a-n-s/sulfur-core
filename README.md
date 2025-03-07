@@ -3,12 +3,12 @@
 [![BepInEx](https://img.shields.io/badge/BepInEx-5.4.21-green)](https://docs.bepinex.dev/)
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
 
-✨ **ModCore** 是一个增强游戏体验的 Mod，提供 **API 接口** 让其他 Mod 轻松集成。  
+✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开源人员提供参考，目前正在完善阶段并为做开源做准备。  
 🎯 **主要功能：**
-- ✅ 伤害监听 API
-- ✅ 物品管理 API
-- ✅ UI 交互增强
+- ✅ 监听大部分游戏常用的事件
+- ✅ 提供游戏内的绝大部分API
 - ✅ 玩家事件追踪
+- 📌 待补充...
 
 ## 📸 预览
 ![Image](https://github.com/user-attachments/assets/ec8f7b98-14e3-4478-a2dc-e4dc61fec605)
@@ -24,5 +24,8 @@ DamageAPI.OnBeforeDamage += (unit, ref float damage, ref DamageType type, ref Da
     if (unit == PlayerAPI.player) return false; // 阻止伤害
     return true;
 };
+```
+
+**其余待补充...**
 
 
