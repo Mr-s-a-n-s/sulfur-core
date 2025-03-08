@@ -49,7 +49,7 @@ Pendiente de añadir.
 ```csharp
 DamageAPI.OnBeforeDamage += (unit Unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
 {
-    if (unit == PlayerAPI.player) return false; // Evitar el daño
+    if (unit == PlayerAPI.uplayer) return false; // Evitar el daño
     return true;
 };
 ```
