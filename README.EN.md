@@ -49,7 +49,7 @@ Feel free to submit PRs or Issues to improve this mod!
 ```csharp
 DamageAPI.OnBeforeDamage += (unit Unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
 {
-    if (unit == PlayerAPI.player) return false; // Prevent damage
+    if (unit == PlayerAPI.uplayer) return false; // Prevent damage
     return true;
 };
 ```
