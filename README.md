@@ -23,7 +23,7 @@
 - 📌 待补充...
 
 ## 📸 预览
-![Image](https://github.com/user-attachments/assets/ec8f7b98-14e3-4478-a2dc-e4dc61fec605)
+![Image](https://github.com/user-attachments/assets/e4e23bee-fd30-4c21-85ec-78261142eb42)
 
 ## 🚀 安装指南
 等待补充
