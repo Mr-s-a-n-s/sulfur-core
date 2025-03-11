@@ -1,4 +1,4 @@
-# Sulfur ModCore API | Sulfur Mod API
+# Sulfur ModCore API | 火湖模组API
 ![Version](https://img.shields.io/badge/version-0.3.6Alpha-blue)
 [![BepInEx](https://img.shields.io/badge/BepInEx-5.4.21-green)](https://docs.bepinex.dev/)
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
@@ -50,3 +50,5 @@ DamageAPI.OnBeforeDamage += (Unit unit, ref float damage, ref DamageType type, r
     if (unit == PlayerAPI.uplayer) return false; // Prevent damage
     return true;
 };
+```
+Comeing soon...
