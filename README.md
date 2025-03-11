@@ -9,7 +9,7 @@
 - [🇪🇸 Español](README.es.md)
 
 ## 🔥 介绍
-✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开发人员提供参考，🚧目前正在完善阶段并为做开源做准备。  
+✨ **ModCore** 提供 **API 接口** 让其他 Mod 轻松集成或让其他Mod开发人员提供参考，🚧目前正在完善阶段。  
 🎯 **主要功能：**
 - ✅ 全物品和对应的Sprite字典
 - ✅ 玩家事件追踪
@@ -26,7 +26,7 @@
 ![Image](https://github.com/user-attachments/assets/e4e23bee-fd30-4c21-85ec-78261142eb42)
 
 ## 🚀 安装指南
-等待补充
+将Mod.Core放入\SULFUR\BepInEx\plugins
 
 ## 🚧 目前正在施工
 - 🛠️ 补全已知API
@@ -45,7 +45,7 @@
 ## 🛠 API 介绍
 **监听伤害事件**
 ```csharp
-DamageAPI.OnBeforeDamage += (unit Unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
+DamageAPI.OnBeforeDamage += (Unit unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
 {
     if (unit == PlayerAPI.uplayer) return false; // 阻止伤害
     return true;
