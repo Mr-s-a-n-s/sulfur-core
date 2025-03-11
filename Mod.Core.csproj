@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF07D541-D577-488B-8A2B-8D9E03110400}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mod.Core</RootNamespace>
+    <AssemblyName>Mod.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Event\damage\damageEvent.cs" />
+    <Compile Include="API\LevelGenerationAPI.cs" />
+    <Compile Include="API\PlayerAPI.cs" />
+    <Compile Include="Event\Movement\DoJumpEvent.cs" />
+    <Compile Include="Event\OnInteract\NpcOnInteractEvent.cs" />
+    <Compile Include="Event\OnInteract\StashChestOnInteractEvent.cs" />
+    <Compile Include="Event\Spawn\SpawnPickItemEvent.cs" />
+    <Compile Include="Event\Spawn\SpawnLevelUnitsEvent.cs" />
+    <Compile Include="Event\Spawn\SpawnMapeventEvent.cs" />
+    <Compile Include="Event\Spawn\SpawnPlayerEvent.cs" />
+    <Compile Include="Event\Level\StartLevelRoutineGraphEvent.cs" />
+    <Compile Include="Event\UI\InitStationPositionUIEvent.cs" />
+    <Compile Include="Event\UI\SetupBagSpaceGridEvent.cs" />
+    <Compile Include="Event\UI\SetupGridEvent.cs" />
+    <Compile Include="Event\Unit\UnitDieEvent.cs" />
+    <Compile Include="Event\Unit\UnitSpawnEvent.cs" />
+    <Compile Include="Event\Unit\UnitSpawnLootEvent.cs" />
+    <Compile Include="Event\Weapon\MeleeChargeMeleeEvent.cs" />
+    <Compile Include="Event\Weapon\MeleeColliderEvent.cs" />
+    <Compile Include="Event\Weapon\WeaponAddExperienceEvent.cs" />
+    <Compile Include="Event\Weapon\WeaponAttemptShootEvent.cs" />
+    <Compile Include="Event\Weapon\WeaponHandleShootingUpdateEvent.cs" />
+    <Compile Include="Event\Weapon\WeaponReloadEvent.cs" />
+    <Compile Include="Event\Weapon\WeaponShootEvent.cs" />
+    <Compile Include="HarmonyFix\Level\FinalizeLevelNodeExecuteFix.cs" />
+    <Compile Include="HarmonyFix\Level\RegStaticUnitsAndMutateUnitsNodeFix.cs" />
+    <Compile Include="HarmonyFix\Level\SpawnEnemiesNodeFix.cs" />
+    <Compile Include="HarmonyFix\Movement\DoJumpFix.cs" />
+    <Compile Include="HarmonyFix\OnInteract\NpcOnInteractFix.cs" />
+    <Compile Include="HarmonyFix\OnInteract\StashChestOnInteractFix.cs" />
+    <Compile Include="HarmonyFix\Other\ChangeLanguageFix.cs" />
+    <Compile Include="HarmonyFix\Spawn\PickupSpawnFix.cs" />
+    <Compile Include="HarmonyFix\UI\inventoryUIFix.cs" />
+    <Compile Include="HarmonyFix\UI\PositionUIFix.cs" />
+    <Compile Include="HarmonyFix\UI\SetupGridFix.cs" />
+    <Compile Include="HarmonyFix\Unit\DieFix.cs" />
+    <Compile Include="HarmonyFix\Loader.cs" />
+    <Compile Include="HarmonyFix\Other\LoadPlayerSettings.cs" />
+    <Compile Include="Event\OnInteract\PickupOnInteractEvent.cs" />
+    <Compile Include="HarmonyFix\OnInteract\PickupOnInteractFix.cs" />
+    <Compile Include="HarmonyFix\Unit\RecieveDamage.cs" />
+    <Compile Include="HarmonyFix\Spawn\SpawnEventsFix.cs" />
+    <Compile Include="HarmonyFix\Spawn\SpawnEventsNodeExecuteFix.cs" />
+    <Compile Include="HarmonyFix\Spawn\SpawnLevelUnitsFix.cs" />
+    <Compile Include="HarmonyFix\Spawn\SpawnLootFix.cs" />
+    <Compile Include="HarmonyFix\Spawn\SpawnPlayerNodeFix.cs" />
+    <Compile Include="HarmonyFix\Level\StartLevelRoutineGraphFix.cs" />
+    <Compile Include="HarmonyFix\Unit\TakeHitFix.cs" />
+    <Compile Include="HarmonyFix\Unit\UnitSpawnFix.cs" />
+    <Compile Include="HarmonyFix\Weapon\AttemptShootFix.cs" />
+    <Compile Include="HarmonyFix\Weapon\ChargeMeleeFix.cs" />
+    <Compile Include="HarmonyFix\Weapon\HandleShootingUpdateFix.cs" />
+    <Compile Include="HarmonyFix\Weapon\MeleeColliderFix.cs" />
+    <Compile Include="HarmonyFix\Weapon\WeaponAddExperienceFix.cs" />
+    <Compile Include="HarmonyFix\Weapon\WeaponReloadFix.cs" />
+    <Compile Include="HarmonyFix\Weapon\WeaponShootFix.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="API\MainAPI.cs" />
+    <Compile Include="ModCore.cs" />
+    <Compile Include="OriginalEvent\GameEventManager.cs" />
+    <Compile Include="OriginalEvent\ItemEventManager.cs" />
+    <Compile Include="OriginalEvent\LevelEventManager.cs" />
+    <Compile Include="OriginalEvent\UnitEventManager.cs" />
+    <Compile Include="OriginalEvent\WeaponEventManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Event\damage\TakeHitEvent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony20">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\0Harmony20.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="AstarPathfindingProject">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\AstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Fbx">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Autodesk.Fbx.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Fbx.BuildTestAssets">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Autodesk.Fbx.BuildTestAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\BepInEx.Preloader.dll</HintPath>
+    </Reference>
+    <Reference Include="CharacterMovementFundamentals">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\CharacterMovementFundamentals.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Drawing">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="EasySave3">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\EasySave3.dll</HintPath>
+    </Reference>
+    <Reference Include="EZCameraShake">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\EZCameraShake.dll</HintPath>
+    </Reference>
+    <Reference Include="HarmonyXInterop">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\HarmonyXInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="I2AsmDef">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\I2AsmDef.dll</HintPath>
+    </Reference>
+    <Reference Include="InputIcons">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\InputIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="knackelibang.easysettings">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\knackelibang.easysettings.dll</HintPath>
+    </Reference>
+    <Reference Include="knackelibang.graphdrawer">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\knackelibang.graphdrawer.dll</HintPath>
+    </Reference>
+    <Reference Include="Knackelibang.MakerGraph">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Knackelibang.MakerGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="Kryz.CharacterStats">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Kryz.CharacterStats.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="NETVM">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\NETVM.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PackageTools">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\PackageTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ParadoxNotion">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\ParadoxNotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.ClipperLib">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Pathfinding.ClipperLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Poly2Tri">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="PerfectRandom.Sulfur.Core">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\PerfectRandom.Sulfur.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PerfectRandom.Sulfur.Gameplay">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\PerfectRandom.Sulfur.Gameplay.dll</HintPath>
+    </Reference>
+    <Reference Include="PerfectRandom.Sulfur.LevelGeneration">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\PerfectRandom.Sulfur.LevelGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="Sonity.Public.Runtime">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Sonity.Public.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Sonity.Runtime">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Sonity.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.InputSystem.ForUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.KdTree">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.ProBuilder.KdTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Poly2Tri">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Profiling.Core">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Profiling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Services.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Services.Core.Environments.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ContentLoadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="XNode">
+      <HintPath>..\..\新物品加载器\新物品加载器\bin\Release\XNode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
