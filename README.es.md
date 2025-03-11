@@ -1,5 +1,5 @@
 # Sulfur ModCore API | 火湖模组API
-![Version](https://img.shields.io/badge/version-0.2.19Alpha-blue)
+![Version](https://img.shields.io/badge/version-0.3.6Alpha-blue)
 [![BepInEx](https://img.shields.io/badge/BepInEx-5.4.21-green)](https://docs.bepinex.dev/)
 ![Support](https://img.shields.io/badge/support-ModdingCommunity-green)
 
