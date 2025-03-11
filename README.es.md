@@ -8,49 +8,47 @@
 - [🇨🇳 简体中文](README.md)
 - [🇪🇸 Español](README.es.md)
 
-## 🔥 Introducción  
-✨ **ModCore** proporciona **interfaces de API** que permiten a otros mods integrarse fácilmente o servir como referencia para otros desarrolladores de mods. 🚧 Actualmente, está en fase de mejora y preparación para su lanzamiento como código abierto.  
+## 🔥 Introducción
+✨ **ModCore** proporciona una **interfaz API** que permite a otros mods integrarse fácilmente o servir como referencia para otros desarrolladores de mods. 🚧 Actualmente en desarrollo.  
+🎯 **Características principales:**
+- ✅ Diccionario completo de objetos y sus sprites correspondientes
+- ✅ Seguimiento de eventos del jugador
+- ✅ Eventos del mapa
+- ✅ Eventos de carga
+- ✅ Eventos de generación
+- ✅ API de colecciones de varios Manager
+- ✅ API relacionadas con el jugador
+- ✅ Eventos de daño
+- ✅ Varios eventos de interacción
+- 📌 Más por agregar...
 
-🎯 **Características principales:**  
-- ✅ completa de objetos y diccionario de Sprites correspondientes  
-- ✅ Seguimiento de eventos del jugador  
-- ✅ Eventos del mapa  
-- ✅ Eventos de carga  
-- ✅ Eventos de generación  
-- ✅ Colección de varias APIs de administradores  
-- ✅ APIs relacionadas con el jugador  
-- ✅ Eventos de daño  
-- ✅ Diversos eventos de interacción  
-- 📌 Más por añadir...  
-
-## 📸 Vista previa  
+## 📸 Vista previa
 ![Image](https://github.com/user-attachments/assets/e4e23bee-fd30-4c21-85ec-78261142eb42)
 
-## 🚀 Guía de instalación  
-Pendiente de añadir.  
+## 🚀 Guía de instalación
+Coloca `Mod.Core` en `\SULFUR\BepInEx\plugins`
 
-## 🚧 En desarrollo  
-- 🛠️ Completar las API conocidas  
-- 🛠️ Añadir manejadores de eventos  
-- 🛠️ Mejorar la documentación  
-- 📌 Más por añadir...  
+## 🚧 Actualmente en desarrollo
+- 🛠️ Completar las APIs conocidas
+- 🛠️ Implementar los eventos principales
+- 🛠️ Finalizar la documentación
+- 📌 Más por agregar...
 
-## 🤝 Contribución  
-¡Siéntete libre de enviar PRs o Issues para mejorar este mod!  
+## 🤝 Contribución
+¡Se aceptan PRs e Issues para mejorar este mod!  
+📌 **Pasos para desarrollar**:
+1. Haz un fork de este repositorio
+2. Clona tu fork
+3. Crea una nueva rama y realiza modificaciones
+4. Envía un PR 🎉
 
-📌 **Pasos para el desarrollo:**  
-1. Haz un fork de este repositorio  
-2. Clona tu fork  
-3. Crea una nueva rama y realiza modificaciones  
-4. Envía un PR 🎉  
-
-## 🛠 Descripción de la API  
-### **Escuchar eventos de daño**  
+## 🛠 Descripción de la API
+**Escuchar eventos de daño**
 ```csharp
-DamageAPI.OnBeforeDamage += (unit Unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
+DamageAPI.OnBeforeDamage += (Unit unit, ref float damage, ref DamageType type, ref DamageSourceData source, ref Hitbox hitbox, ref Vector3 point) =>
 {
-    if (unit == PlayerAPI.uplayer) return false; // Evitar el daño
+    if (unit == PlayerAPI.uplayer) return false; // Prevenir el daño
     return true;
 };
 ```
-Comeing soon....
+Comeing soon...
